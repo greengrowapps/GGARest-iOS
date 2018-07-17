@@ -22,8 +22,8 @@ pod 'GGARest'
 
 ## Author
 
-Adrian Sanchis Serrano, adrian.sanchis@greengrowapps.com
+GreenGrowappa,info@greengrowapps.com
 
 ## License
 
-GGARest is available under the MIT license. See the LICENSE file for more info.
+GGARest is available under the Apache License Version 2.0. See the LICENSE file for more info.
