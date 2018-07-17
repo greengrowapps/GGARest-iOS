@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "OBJCObjectFactory.h"
 
 FOUNDATION_EXPORT double GGARestVersionNumber;
 FOUNDATION_EXPORT const unsigned char GGARestVersionString[];

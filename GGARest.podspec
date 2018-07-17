@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GGARest'
-  s.version          = '0.0.1'
+  s.version          = '0.1.0'
   s.summary          = 'REST library for iOs applications with automatic JSON serialization / deserialization'
 
 # This description is used to generate tags and improve search results.
@@ -40,4 +40,6 @@ See examples in github
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+    s.dependency 'Alamofire', '~> 4.7'
+    s.dependency 'SwiftyJSON', '~> 4.0'
 end

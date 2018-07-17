@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		3FAB805F774E355247B0CE80 /* Pods_GGARest_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A522EDE07022BF5E9544A6EA /* Pods_GGARest_Example.framework */; };
+		4DE093EA20FE459200AE0BF7 /* ObjectMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE093E620FE459100AE0BF7 /* ObjectMapperTests.swift */; };
+		4DE093EC20FE459200AE0BF7 /* GGarestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE093E720FE459100AE0BF7 /* GGarestTests.swift */; };
+		4DE093EE20FE459200AE0BF7 /* JsonDeserializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE093E820FE459200AE0BF7 /* JsonDeserializationTests.swift */; };
+		4DE093F220FE471900AE0BF7 /* MyChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE093F020FE471800AE0BF7 /* MyChild.swift */; };
+		4DE093F320FE471900AE0BF7 /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE093F120FE471900AE0BF7 /* MyClass.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9B032E0AEEF96DED4F54F014 /* Pods_GGARest_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C4B46FFF088181C68F8B49 /* Pods_GGARest_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,8 +34,13 @@
 /* Begin PBXFileReference section */
 		20C4B46FFF088181C68F8B49 /* Pods_GGARest_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GGARest_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5EB38848199BD2BE0EC0BE /* Pods-GGARest_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGARest_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GGARest_Example/Pods-GGARest_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4DE093E620FE459100AE0BF7 /* ObjectMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectMapperTests.swift; sourceTree = "<group>"; };
+		4DE093E720FE459100AE0BF7 /* GGarestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GGarestTests.swift; sourceTree = "<group>"; };
+		4DE093E820FE459200AE0BF7 /* JsonDeserializationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDeserializationTests.swift; sourceTree = "<group>"; };
+		4DE093F020FE471800AE0BF7 /* MyChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyChild.swift; sourceTree = "<group>"; };
+		4DE093F120FE471900AE0BF7 /* MyClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
 		53736B7F103B0F3E3D839D0C /* Pods-GGARest_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGARest_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-GGARest_Example/Pods-GGARest_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5D2927220E378661CE15B5BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		5D2927220E378661CE15B5BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* GGARest_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGARest_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,12 +50,11 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* GGARest_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGARest_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6242C1C74EA3645BB384B8BE /* Pods-GGARest_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGARest_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GGARest_Tests/Pods-GGARest_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A522EDE07022BF5E9544A6EA /* Pods_GGARest_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GGARest_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C134500E1D2EC4212E1A20E1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C134500E1D2EC4212E1A20E1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D9277AAA28563D8B5AB428ED /* Pods-GGARest_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GGARest_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GGARest_Tests/Pods-GGARest_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		FC543DC599D8652E4D9BECD6 /* GGARest.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = GGARest.podspec; path = ../GGARest.podspec; sourceTree = "<group>"; };
+		FC543DC599D8652E4D9BECD6 /* GGARest.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GGARest.podspec; path = ../GGARest.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DE093EF20FE46FD00AE0BF7 /* DataObjects */ = {
+			isa = PBXGroup;
+			children = (
+				4DE093F020FE471800AE0BF7 /* MyChild.swift */,
+				4DE093F120FE471900AE0BF7 /* MyClass.swift */,
+			);
+			path = DataObjects;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +132,10 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				4DE093EF20FE46FD00AE0BF7 /* DataObjects */,
+				4DE093E720FE459100AE0BF7 /* GGarestTests.swift */,
+				4DE093E820FE459200AE0BF7 /* JsonDeserializationTests.swift */,
+				4DE093E620FE459100AE0BF7 /* ObjectMapperTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -304,11 +324,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GGARest_Example/Pods-GGARest_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GGARest/GGARest.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GGARest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -379,7 +403,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				4DE093F220FE471900AE0BF7 /* MyChild.swift in Sources */,
+				4DE093F320FE471900AE0BF7 /* MyClass.swift in Sources */,
+				4DE093EE20FE459200AE0BF7 /* JsonDeserializationTests.swift in Sources */,
+				4DE093EA20FE459200AE0BF7 /* ObjectMapperTests.swift in Sources */,
+				4DE093EC20FE459200AE0BF7 /* GGarestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
