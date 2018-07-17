@@ -22,14 +22,14 @@ REST library for iOs applications with automatic JSON serialization / deserializ
 See examples in github
                        DESC
 
-  s.homepage         = 'https://greengrowapps.com'
+  s.homepage         = 'https://github.com/greengrowapps/GGARest-iOS'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'Apache2', :file => 'LICENSE' }
-  s.author           = { 'GreenGrowAppa' => 'info@greengrowapps.com' }
+  s.author           = { 'GreenGrowApps' => 'info@greengrowapps.com' }
   s.source           = { :git => 'https://github.com/greengrowapps/GGARest-iOS.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'GGARest/Classes/**/*'
   
