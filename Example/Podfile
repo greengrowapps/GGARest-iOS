@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GGARest_Example' do
+  pod 'GGARest', :path => '../'
+
+  target 'GGARest_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

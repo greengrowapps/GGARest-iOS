@@ -1,0 +1,6 @@
+framework module Pods_GGARest_Tests {
+  umbrella header "Pods-GGARest_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

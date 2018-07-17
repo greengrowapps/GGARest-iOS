@@ -1,0 +1,711 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D1B5B421C60BDA50D69EFF9CEF2EC72 /* GGARest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6124F2AB9563C377FB4A38B72725DD8 /* GGARest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20021BE71744882A6A02058D5F137103 /* Pods-GGARest_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E24B4A538E66E7EF9290B25DFD6B53AB /* Pods-GGARest_Tests-dummy.m */; };
+		3447D5078B2F32FA472DA5F2E3D949AC /* GGARest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B33D5116AEA8FDF6EEE11BF05C6E5D /* GGARest-dummy.m */; };
+		4CD72AED073B8A8B42CF65D50EBDF74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		756088B02785F89F6C88B5C16A3E1C3E /* Pods-GGARest_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E2FF70144F76838089FFD93A7A6002D /* Pods-GGARest_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83A23F92D77E9DDCA43C58B3B5A802E9 /* Pods-GGARest_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1651DB4F40FD7DA06C78FEACC47F08 /* Pods-GGARest_Example-dummy.m */; };
+		9DC5D356E57E5E76B0FF4747425C6C87 /* Pods-GGARest_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E50BA490ABBF333FEBA6E00FAB3BFE /* Pods-GGARest_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF2E77A585AC215C68BA926FFE7D1E86 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75D79730DDBE5CD0A491DDA10E991E7 /* ReplaceMe.swift */; };
+		C5CB6BDEBA32E5DA48A6297213619605 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		F564D6F7558031C821D83320F03EED03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5EAD32240882D2F03EB94CDD28C4E7F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D89D498712EFB2247F841A7847F367F;
+			remoteInfo = GGARest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09E50BA490ABBF333FEBA6E00FAB3BFE /* Pods-GGARest_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GGARest_Tests-umbrella.h"; sourceTree = "<group>"; };
+		1E2FF70144F76838089FFD93A7A6002D /* Pods-GGARest_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GGARest_Example-umbrella.h"; sourceTree = "<group>"; };
+		3DBBFAB4114E8815011E6BE4A6097072 /* Pods-GGARest_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GGARest_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		51632503132C44899B6ECC50131CC611 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57B33D5116AEA8FDF6EEE11BF05C6E5D /* GGARest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GGARest-dummy.m"; sourceTree = "<group>"; };
+		5DC23CD997DA2343B6FCCF2ABA12315F /* Pods-GGARest_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GGARest_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5E7260FBF0BFAD5B49C05C47B27BB498 /* Pods-GGARest_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GGARest_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5F51011407D1C7B84E68F96412A0C362 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64E540F59FA608E70068A8A37B749826 /* Pods-GGARest_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GGARest_Tests-resources.sh"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6CF946B37732740672B9D47560F60DEF /* Pods-GGARest_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GGARest_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		7EF002CA49353CD9F53B3A47567B46B7 /* Pods-GGARest_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GGARest_Example.modulemap"; sourceTree = "<group>"; };
+		81FFBC67D6C025134049A6E54A7FCEEE /* GGARest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGARest-prefix.pch"; sourceTree = "<group>"; };
+		839ABEDD53F44D49791844693457DEC6 /* Pods_GGARest_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GGARest_Example.framework; path = "Pods-GGARest_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C1651DB4F40FD7DA06C78FEACC47F08 /* Pods-GGARest_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GGARest_Example-dummy.m"; sourceTree = "<group>"; };
+		90BD191EB80C4426FAAA5358DA6A34B4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96D2B1C0029EF2D53EBBD51ADFB24839 /* Pods-GGARest_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GGARest_Tests.modulemap"; sourceTree = "<group>"; };
+		A822CB7D6B49BA778A021FFFBE09F1D2 /* Pods-GGARest_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GGARest_Example-frameworks.sh"; sourceTree = "<group>"; };
+		A9B21ADF85A5330C3FB756B9E7DA81B9 /* Pods_GGARest_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GGARest_Tests.framework; path = "Pods-GGARest_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B18E5BA436B4221D286EE7925865E177 /* Pods-GGARest_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGARest_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B327A3490B1D10454F3B730F73DA3A71 /* GGARest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GGARest.modulemap; sourceTree = "<group>"; };
+		B4354F3A751A18D6B1128DEC3670AB08 /* GGARest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GGARest.framework; path = GGARest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B75D79730DDBE5CD0A491DDA10E991E7 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = GGARest/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		C60FFEC28E6074C83417F71D5D2F5DCE /* GGARest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGARest.xcconfig; sourceTree = "<group>"; };
+		C85C84A32DED597D2B24819F2B2D2AE7 /* Pods-GGARest_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGARest_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D6124F2AB9563C377FB4A38B72725DD8 /* GGARest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGARest-umbrella.h"; sourceTree = "<group>"; };
+		E0D22C257CDA9585246B7688A9EB5212 /* Pods-GGARest_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGARest_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E24B4A538E66E7EF9290B25DFD6B53AB /* Pods-GGARest_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GGARest_Tests-dummy.m"; sourceTree = "<group>"; };
+		E70462ABA34B16EBD9D031F979106376 /* Pods-GGARest_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GGARest_Example-resources.sh"; sourceTree = "<group>"; };
+		F72BC0E0D037E2F2B7D7999B4AD4D229 /* Pods-GGARest_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GGARest_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F81E70C6B97EB5BEA67E98A6DEA4EAE5 /* Pods-GGARest_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GGARest_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19F6A78ED1C10D9F2785FB3934A35E81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F564D6F7558031C821D83320F03EED03 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E302755DABDBA62FEEFB081E0BEE927 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5CB6BDEBA32E5DA48A6297213619605 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		665893AA487B616D8EA31719879DACBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CD72AED073B8A8B42CF65D50EBDF74D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01678873E0ED8BE37622C986F02B6DC3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F01539747F21C813EA73178486EF26A /* Pods-GGARest_Example */,
+				A8E963D3A3981A2C9182891E7CB5A2D5 /* Pods-GGARest_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		27333C48FDD3BE6F0D839E9900ABD76C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4354F3A751A18D6B1128DEC3670AB08 /* GGARest.framework */,
+				839ABEDD53F44D49791844693457DEC6 /* Pods_GGARest_Example.framework */,
+				A9B21ADF85A5330C3FB756B9E7DA81B9 /* Pods_GGARest_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F01539747F21C813EA73178486EF26A /* Pods-GGARest_Example */ = {
+			isa = PBXGroup;
+			children = (
+				5F51011407D1C7B84E68F96412A0C362 /* Info.plist */,
+				7EF002CA49353CD9F53B3A47567B46B7 /* Pods-GGARest_Example.modulemap */,
+				F81E70C6B97EB5BEA67E98A6DEA4EAE5 /* Pods-GGARest_Example-acknowledgements.markdown */,
+				3DBBFAB4114E8815011E6BE4A6097072 /* Pods-GGARest_Example-acknowledgements.plist */,
+				8C1651DB4F40FD7DA06C78FEACC47F08 /* Pods-GGARest_Example-dummy.m */,
+				A822CB7D6B49BA778A021FFFBE09F1D2 /* Pods-GGARest_Example-frameworks.sh */,
+				E70462ABA34B16EBD9D031F979106376 /* Pods-GGARest_Example-resources.sh */,
+				1E2FF70144F76838089FFD93A7A6002D /* Pods-GGARest_Example-umbrella.h */,
+				F72BC0E0D037E2F2B7D7999B4AD4D229 /* Pods-GGARest_Example.debug.xcconfig */,
+				B18E5BA436B4221D286EE7925865E177 /* Pods-GGARest_Example.release.xcconfig */,
+			);
+			name = "Pods-GGARest_Example";
+			path = "Target Support Files/Pods-GGARest_Example";
+			sourceTree = "<group>";
+		};
+		770BD101FA6A4CC622C0FBF047472BBC /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A860717C7E5393393F5CCA6B3289DA98 /* GGARest */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				770BD101FA6A4CC622C0FBF047472BBC /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				27333C48FDD3BE6F0D839E9900ABD76C /* Products */,
+				01678873E0ED8BE37622C986F02B6DC3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A2AF8BAFCC749EB678579624AE2A73BC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B327A3490B1D10454F3B730F73DA3A71 /* GGARest.modulemap */,
+				C60FFEC28E6074C83417F71D5D2F5DCE /* GGARest.xcconfig */,
+				57B33D5116AEA8FDF6EEE11BF05C6E5D /* GGARest-dummy.m */,
+				81FFBC67D6C025134049A6E54A7FCEEE /* GGARest-prefix.pch */,
+				D6124F2AB9563C377FB4A38B72725DD8 /* GGARest-umbrella.h */,
+				90BD191EB80C4426FAAA5358DA6A34B4 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/GGARest";
+			sourceTree = "<group>";
+		};
+		A860717C7E5393393F5CCA6B3289DA98 /* GGARest */ = {
+			isa = PBXGroup;
+			children = (
+				B75D79730DDBE5CD0A491DDA10E991E7 /* ReplaceMe.swift */,
+				A2AF8BAFCC749EB678579624AE2A73BC /* Support Files */,
+			);
+			name = GGARest;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		A8E963D3A3981A2C9182891E7CB5A2D5 /* Pods-GGARest_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				51632503132C44899B6ECC50131CC611 /* Info.plist */,
+				96D2B1C0029EF2D53EBBD51ADFB24839 /* Pods-GGARest_Tests.modulemap */,
+				5DC23CD997DA2343B6FCCF2ABA12315F /* Pods-GGARest_Tests-acknowledgements.markdown */,
+				5E7260FBF0BFAD5B49C05C47B27BB498 /* Pods-GGARest_Tests-acknowledgements.plist */,
+				E24B4A538E66E7EF9290B25DFD6B53AB /* Pods-GGARest_Tests-dummy.m */,
+				6CF946B37732740672B9D47560F60DEF /* Pods-GGARest_Tests-frameworks.sh */,
+				64E540F59FA608E70068A8A37B749826 /* Pods-GGARest_Tests-resources.sh */,
+				09E50BA490ABBF333FEBA6E00FAB3BFE /* Pods-GGARest_Tests-umbrella.h */,
+				C85C84A32DED597D2B24819F2B2D2AE7 /* Pods-GGARest_Tests.debug.xcconfig */,
+				E0D22C257CDA9585246B7688A9EB5212 /* Pods-GGARest_Tests.release.xcconfig */,
+			);
+			name = "Pods-GGARest_Tests";
+			path = "Target Support Files/Pods-GGARest_Tests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9C220065DF8224F13D09F43C9F330386 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DC5D356E57E5E76B0FF4747425C6C87 /* Pods-GGARest_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB2FEC097405BFAAD129367AE6B2673E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				756088B02785F89F6C88B5C16A3E1C3E /* Pods-GGARest_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0A47373208F76F3043507E53CB5A96 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D1B5B421C60BDA50D69EFF9CEF2EC72 /* GGARest-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		73D25A3086A634C9E5623BEDBE02E11F /* Pods-GGARest_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 484D5B5196EBA4683728C01A8CC61D53 /* Build configuration list for PBXNativeTarget "Pods-GGARest_Example" */;
+			buildPhases = (
+				1629A6F0F98715796FB93C09B0B5362C /* Sources */,
+				4E302755DABDBA62FEEFB081E0BEE927 /* Frameworks */,
+				CB2FEC097405BFAAD129367AE6B2673E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6260FAE411724E65E064DBBD97C1873 /* PBXTargetDependency */,
+			);
+			name = "Pods-GGARest_Example";
+			productName = "Pods-GGARest_Example";
+			productReference = 839ABEDD53F44D49791844693457DEC6 /* Pods_GGARest_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8D89D498712EFB2247F841A7847F367F /* GGARest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 535B507F9CAC07EA25675D8DB9EB9FB5 /* Build configuration list for PBXNativeTarget "GGARest" */;
+			buildPhases = (
+				E1C8354CC2F415700317A6E152C18CEC /* Sources */,
+				665893AA487B616D8EA31719879DACBF /* Frameworks */,
+				EA0A47373208F76F3043507E53CB5A96 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GGARest;
+			productName = GGARest;
+			productReference = B4354F3A751A18D6B1128DEC3670AB08 /* GGARest.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A23E3B974D774A4725AFD1EC3D79CF82 /* Pods-GGARest_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80C354D70671F62B35AAFE799D66243 /* Build configuration list for PBXNativeTarget "Pods-GGARest_Tests" */;
+			buildPhases = (
+				57A562903D74D160136500B921751F62 /* Sources */,
+				19F6A78ED1C10D9F2785FB3934A35E81 /* Frameworks */,
+				9C220065DF8224F13D09F43C9F330386 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GGARest_Tests";
+			productName = "Pods-GGARest_Tests";
+			productReference = A9B21ADF85A5330C3FB756B9E7DA81B9 /* Pods_GGARest_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 27333C48FDD3BE6F0D839E9900ABD76C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D89D498712EFB2247F841A7847F367F /* GGARest */,
+				73D25A3086A634C9E5623BEDBE02E11F /* Pods-GGARest_Example */,
+				A23E3B974D774A4725AFD1EC3D79CF82 /* Pods-GGARest_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1629A6F0F98715796FB93C09B0B5362C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A23F92D77E9DDCA43C58B3B5A802E9 /* Pods-GGARest_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57A562903D74D160136500B921751F62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20021BE71744882A6A02058D5F137103 /* Pods-GGARest_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1C8354CC2F415700317A6E152C18CEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3447D5078B2F32FA472DA5F2E3D949AC /* GGARest-dummy.m in Sources */,
+				BF2E77A585AC215C68BA926FFE7D1E86 /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6260FAE411724E65E064DBBD97C1873 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GGARest;
+			target = 8D89D498712EFB2247F841A7847F367F /* GGARest */;
+			targetProxy = 5EAD32240882D2F03EB94CDD28C4E7F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		255BD91031D5B1555B324457E282D776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C60FFEC28E6074C83417F71D5D2F5DCE /* GGARest.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GGARest/GGARest-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GGARest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GGARest/GGARest.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GGARest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		279A6352A7FF760E6E25E9509FF648CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B18E5BA436B4221D286EE7925865E177 /* Pods-GGARest_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GGARest_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GGARest_Example/Pods-GGARest_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GGARest_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		280CCE924997B5967AF7A16630FB6BC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C85C84A32DED597D2B24819F2B2D2AE7 /* Pods-GGARest_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GGARest_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GGARest_Tests/Pods-GGARest_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GGARest_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3FF0417E4BC125188534480D840731DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F72BC0E0D037E2F2B7D7999B4AD4D229 /* Pods-GGARest_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GGARest_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GGARest_Example/Pods-GGARest_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GGARest_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6B139B4017A7C87257FDA7BB2627F235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C60FFEC28E6074C83417F71D5D2F5DCE /* GGARest.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GGARest/GGARest-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GGARest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GGARest/GGARest.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GGARest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EED546DBB23FC32035C9BDC4E22B30BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F04EE2B9C5D665633B2AD8856C1041FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0D22C257CDA9585246B7688A9EB5212 /* Pods-GGARest_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GGARest_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GGARest_Tests/Pods-GGARest_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GGARest_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED546DBB23FC32035C9BDC4E22B30BD /* Debug */,
+				157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		484D5B5196EBA4683728C01A8CC61D53 /* Build configuration list for PBXNativeTarget "Pods-GGARest_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FF0417E4BC125188534480D840731DC /* Debug */,
+				279A6352A7FF760E6E25E9509FF648CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		535B507F9CAC07EA25675D8DB9EB9FB5 /* Build configuration list for PBXNativeTarget "GGARest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B139B4017A7C87257FDA7BB2627F235 /* Debug */,
+				255BD91031D5B1555B324457E282D776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80C354D70671F62B35AAFE799D66243 /* Build configuration list for PBXNativeTarget "Pods-GGARest_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280CCE924997B5967AF7A16630FB6BC8 /* Debug */,
+				F04EE2B9C5D665633B2AD8856C1041FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
