@@ -22,7 +22,7 @@ pod 'GGARest'
 
 ## Author
 
-GreenGrowappa,info@greengrowapps.com
+GreenGrowapps,info@greengrowapps.com
 
 ## License
 
