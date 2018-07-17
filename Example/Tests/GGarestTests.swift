@@ -10,6 +10,8 @@ import XCTest
 import GGARest
 class GGarestTests: XCTestCase {
     
+
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -79,10 +81,14 @@ class GGarestTests: XCTestCase {
         let url="https://httpbin.org/get";
         GGARest.ws()
             .get(url:url)
-            .onSuccess(simpleListener: {(response: FullRepsonse) -> Void in
-                
+            .onSuccess(resultType: HttpBinResponse.self, objectListener: {(objectStorer:ObjectStorer,fullResponse:FullRepsonse) -> Void in
+                let object = objectStorer.getObject(type: HttpBinResponse.self);
+                XCTAssertNotNil(object)
+                XCTAssertNotNil(object.origin)
+                XCTAssertNotNil(object.url)
+                XCTAssertEqual(url, object.url)
+                XCTAssertEqual(object.headers["Host"], "httpbin.org")
                 expectation.fulfill();
-                print(response)
             })
             .onOther(simpleListener: {(response: FullRepsonse) -> Void in
                 expectation.fulfill();
@@ -95,20 +101,33 @@ class GGarestTests: XCTestCase {
     
     func testPostHttpBin(){
         let expectation = XCTestExpectation(description: "Finish request")
+        let toSend = MyClass()
+        toSend.name="name 1234"
+        toSend.id = 1234
+        toSend.child.id=12345
+        toSend.child2 = MyChild()
+        toSend.child2?.id = 123456
+        toSend.childList.append(MyChild());
+        toSend.childList.append(MyChild());
+        toSend.childList[0].id=1
+        toSend.childList[1].id=2
+    
         
         let url="https://httpbin.org/anything";
         GGARest.ws()
             .post(url: url)
-            .withJson(object: MyClass())
-            .onSuccess(resultType: MyClass.self, objectListener: {(object: ObjectStorer ,response:FullRepsonse) -> Void in
+            .withJson(object:toSend)
+            .onSuccess(resultType: EchoResponse_MyClass.self, objectListener: {(objectStorer: ObjectStorer ,response:FullRepsonse) -> Void in
                 
-                expectation.fulfill();
-                print(response)
-            })
-            .onSuccess(simpleListener: {(response: FullRepsonse) -> Void in
+                let object = objectStorer.getObject(type: EchoResponse_MyClass.self)
+                XCTAssertNotNil(object)
+                XCTAssertNotNil(object.json)
+                self.assertAreEqual(obj: toSend, obj2: object.json!)
                 
+             //   XCTAssertEqual(object.headers["Host"], "httpbin.org")
+             //   XCTAssertEqual(object.headers["Content-Type"], "application/json")
+
                 expectation.fulfill();
-                print(response)
             })
             .onOther(simpleListener: {(response: FullRepsonse) -> Void in
                 expectation.fulfill();
@@ -119,8 +138,20 @@ class GGarestTests: XCTestCase {
         wait(for: [expectation], timeout: 30.0)
     }
     
-  
-    
-  
-    
+    func assertAreEqual(obj:MyClass , obj2:MyClass) {
+        XCTAssertEqual(obj.id, obj2.id);
+        XCTAssertEqual(obj.name, obj2.name)
+        XCTAssertEqual(obj.child.id, obj2.child.id)
+        if(obj.child2 == nil){
+            XCTAssertTrue(obj2.child2 == nil)
+        }else{
+            XCTAssertTrue(obj2.child2 != nil)
+            XCTAssertEqual(obj.child2!.id, obj2.child2!.id)
+        }
+        XCTAssertEqual(obj.childList.count, obj2.childList.count);
+       
+        for i in 0...obj.childList.count-1{
+            XCTAssertEqual(obj.childList[i].id, obj2.childList[i].id)
+        }
+    }
 }

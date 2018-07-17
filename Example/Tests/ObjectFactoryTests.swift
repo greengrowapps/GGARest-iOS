@@ -2,7 +2,7 @@ import XCTest
 import GGARest
 
 
-class ObjectMapperTests: XCTestCase {
+class ObjectFactoryTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

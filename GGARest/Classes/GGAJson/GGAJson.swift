@@ -22,11 +22,11 @@ public class GGAJson {
             let listInfo=ObjectFactory<JSonBaseObject>.getListInfo(className: className);
             switch listInfo.level{
             case 1:
-                return GGAJson.fromJsonLevel1Array(innertype: listInfo.innerType, jsonArray: jsonObject.array!);
+                return GGAJson.fromJsonLevel1Array(innertype: listInfo.innerType, jsonArray: jsonObject.arrayValue);
             case 2:
-                return GGAJson.fromJsonLevel2Array(innertype: listInfo.innerType, jsonArray: jsonObject.array!);
+                return GGAJson.fromJsonLevel2Array(innertype: listInfo.innerType, jsonArray: jsonObject.arrayValue);
             case 3:
-                return GGAJson.fromJsonLevel3Array(innertype: listInfo.innerType, jsonArray: jsonObject.array!);
+                return GGAJson.fromJsonLevel3Array(innertype: listInfo.innerType, jsonArray: jsonObject.arrayValue);
             default:
                 print("ERROR!!");
             }

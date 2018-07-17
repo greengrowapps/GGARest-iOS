@@ -19,16 +19,43 @@ extension Optional : OptionalProtocol {}
 extension Array : JsoneableProtocol {
     public func toJson() -> JSON {
         var ret : [JSON] = []
-        
+       // var ret = JSON();
+
         for item in self {
             let jitem  = item as? JsoneableProtocol;
             if(jitem != nil){
                 ret.append(jitem!.toJson())
             }
         }
-        return JSON(arrayLiteral: ret);
+      
+        return JSON(ret);
     }
 }
+
+extension Int : JsoneableProtocol{
+    public func toJson() -> JSON {
+        return JSON(self);
+    }
+}
+
+extension String : JsoneableProtocol{
+    public func toJson() -> JSON {
+        return JSON(self);
+    }
+}
+
+extension Optional : JsoneableProtocol{
+    public func toJson() -> JSON {
+        if(self != nil){
+            if( self! is JsoneableProtocol){
+                let jsoneable = self! as! JsoneableProtocol;
+                return jsoneable.toJson();
+            }
+        }
+        return JSON.null;
+    }
+}
+
 
 extension  Array where Element:JsoneableProtocol{
     mutating func fillFromJson(json: [JSON], className: String) {
@@ -54,10 +81,6 @@ open class JSonBaseObject: NSObject,JsoneableProtocol {
         for case let (label?, value) in aMirror.children {
             if(value is JsoneableProtocol){
                 ret[label] = (value as! JsoneableProtocol).toJson();
-            }else if(value is String) {
-                ret[label] = JSON(value as! String);
-            }else if(value is Int){
-                ret[label] = JSON(value as! Int);
             }
         }
         
@@ -109,6 +132,18 @@ open class JSonBaseObject: NSObject,JsoneableProtocol {
                 let instance = ObjectFactory<JSonBaseObject>.createInstance(className: className);
                 instance!.fillFromJson(json: json[label]);
                 self.setValue(instance, forKey: label);
+            }
+            
+            if(value is [String:String]){
+            
+                var newvalue = [String:String]();
+                
+                for (key, subJson) in json[label]{
+                    newvalue[key] = subJson.stringValue;
+                }
+                
+                
+                self.setValue(newvalue, forKey: label)
             }
             
             print("name: \(label) type: \(type(of: value)) value: \(value)")
