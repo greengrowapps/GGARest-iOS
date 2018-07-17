@@ -24,8 +24,8 @@ See examples in github
 
   s.homepage         = 'https://greengrowapps.com'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Adrian Sanchis Serrano' => 'adrian.sanchis@greengrowapps.com' }
+  s.license          = { :type => 'Apache2', :file => 'LICENSE' }
+  s.author           = { 'GreenGrowAppa' => 'info@greengrowapps.com' }
   s.source           = { :git => 'https://github.com/greengrowapps/GGARest-iOS.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

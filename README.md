@@ -1,6 +1,6 @@
 # GGARest
 
-[![CI Status](https://img.shields.io/travis/Adrian Sanchis Serrano/GGARest.svg?style=flat)](https://travis-ci.org/Adrian Sanchis Serrano/GGARest)
+[![CI Status](https://img.shields.io/travis/greengrowapps/GGARest-iOS.svg?style=flat)](https://travis-ci.org/greengrowapps/GGARest-iOS)
 [![Version](https://img.shields.io/cocoapods/v/GGARest.svg?style=flat)](https://cocoapods.org/pods/GGARest)
 [![License](https://img.shields.io/cocoapods/l/GGARest.svg?style=flat)](https://cocoapods.org/pods/GGARest)
 [![Platform](https://img.shields.io/cocoapods/p/GGARest.svg?style=flat)](https://cocoapods.org/pods/GGARest)
