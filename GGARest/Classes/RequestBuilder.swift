@@ -53,7 +53,7 @@ public class RequestBuilder {
     var method : ReqestMethod;
     var url : String;
     private var objectListeners = [Int : ListenerStorer]()
-
+    private var headers :[(String,String)] = []
     
     init(url:String ,method: ReqestMethod) {
         self.url=url;
@@ -92,6 +92,10 @@ public class RequestBuilder {
         return self.onResponse(code: -1, simpleListener: simpleListener);
         //return self as! J;
     }
+    public func with<J:RequestBuilder>(headers:(String,String)...) -> J{
+        self.headers=headers;
+        return self as! J;
+    }
     
     public func execute(){
         if let response=GGARest.getMockedContentFor(url: self.url){
@@ -120,6 +124,10 @@ public class RequestBuilder {
             return;
         }
         
+        for header in self.headers{
+            request.setValue(header.1, forHTTPHeaderField: header.0);
+        }
+        
         if(self is PostRequestBuilder){
             let post : PostRequestBuilder = self as! PostRequestBuilder;
             if(post.contentJson != nil){
@@ -130,6 +138,7 @@ public class RequestBuilder {
             }
         }
     
+ 
         
   
         
