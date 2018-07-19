@@ -133,6 +133,34 @@ class GGarestTests: XCTestCase {
         wait(for: [expectation], timeout: 30.0)
     }
     
+    func testPostPlainText(){
+        let expectation = XCTestExpectation(description: "Finish request")
+        
+        let url="https://httpbin.org/post";
+        let textToSend = "asdfasdgfkljfdglkahsdflkajsdghflkjsadf";
+        GGARest.ws()
+            .post(url:url)
+            .withPlainText(text:textToSend)
+            .onSuccess(resultType: HttpBinResponse.self, objectListener: {(objectStorer:ObjectStorer,fullResponse:FullRepsonse) -> Void in
+                let object = objectStorer.getObject(type: HttpBinResponse.self);
+                XCTAssertNotNil(object)
+                XCTAssertNotNil(object.origin)
+                XCTAssertNotNil(object.url)
+                XCTAssertEqual(url, object.url)
+                XCTAssertEqual(object.headers["Host"], "httpbin.org")
+                XCTAssertEqual(object.headers["Content-Type"], "text/plain;charset=UTF-8")
+                XCTAssertEqual(object.data,textToSend);
+                expectation.fulfill();
+            })
+            .onOther(simpleListener: {(response: FullRepsonse) -> Void in
+                expectation.fulfill();
+                XCTFail()
+            })
+            .execute();
+        
+        wait(for: [expectation], timeout: 30.0)
+    }
+    
     func testPostHttpBin(){
         let expectation = XCTestExpectation(description: "Finish request")
         let toSend = MyClass()

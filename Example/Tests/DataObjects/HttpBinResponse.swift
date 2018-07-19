@@ -13,5 +13,6 @@ class HttpBinResponse: JSonBaseObject {
     @objc dynamic var url : String = ""
     @objc dynamic var origin : String = ""
     @objc dynamic var headers =  [String : String]()
+    @objc dynamic var data : String = ""
 
 }

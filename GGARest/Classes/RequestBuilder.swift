@@ -135,6 +135,9 @@ public class RequestBuilder {
                 let json=post.contentJson!.toJson()
                 let pjson = json.rawString(String.Encoding.utf8, options: .prettyPrinted)
                 request.httpBody = (pjson?.data(using: .utf8))! as Data
+            }else if(post.plainText != nil){
+                request.setValue("text/plain;charset=UTF-8", forHTTPHeaderField: "Content-Type")
+                request.httpBody = (post.plainText!.data(using: .utf8))! as Data
             }
         }
     
@@ -190,11 +193,16 @@ public class GetRequestBuilder : RequestBuilder{
 }
 public class PostRequestBuilder : RequestBuilder{
     var contentJson : JsoneableProtocol?
+    var plainText : String?
     init(url: String) {
         super.init(url: url, method: .POST);
     }
     public func withJson(object:JsoneableProtocol) -> RequestBuilder{
         self.contentJson=object;
+        return self;
+    }
+    public func withPlainText(text:String) -> RequestBuilder{
+        self.plainText=text;
         return self;
     }
 }
