@@ -35,7 +35,7 @@ public class ListInfo<T:NSObject> {
 public class ObjectFactory<TBase: NSObject>
 {
     class func isList(className: String) -> Bool{
-        return className.contains("Array");
+        return className.hasPrefix("Swift.Array");
     }
     /**
     Returns a new instance of the specified class,
@@ -89,6 +89,22 @@ public class ObjectFactory<TBase: NSObject>
     private static func extractFirstArrayFromType(className: String)->String{
         let s = className
         let pattern = "Swift.Array<(.*)>"
+        // our goal is capture group 3, "h" in "ha"
+        let regex = try! NSRegularExpression(pattern: pattern)
+        let result = regex.matches(in:s, range:NSMakeRange(0, s.utf16.count))
+        let firstMatch = result[0].range(at: 1) // <-- !!
+        let myNSString = s as NSString
+        let name=myNSString.substring(with: NSRange(location: firstMatch.location, length: firstMatch.length))
+        return name;
+    }
+    
+    public static func isOptional(className: String)->Bool{
+        return className.hasPrefix("Swift.Optional");
+    }
+    
+    public static func optionalInnerType(className: String)->String{
+        let s = "asdfsadf"+className+"asdfasdf"
+        let pattern = "Swift.Optional<(.*)>"
         // our goal is capture group 3, "h" in "ha"
         let regex = try! NSRegularExpression(pattern: pattern)
         let result = regex.matches(in:s, range:NSMakeRange(0, s.utf16.count))

@@ -26,7 +26,14 @@ public class GGAJson {
     }
     
     public static func fromJson(className:String,jsonObject:JSON) -> JsoneableProtocol{
-        if(ObjectFactory.isList(className: className)){
+        if(ObjectFactory.isOptional(className: className)){
+            if(jsonObject.type == SwiftyJSON.Type.null){
+                let op : JsoneableProtocol?
+                op = nil
+                return op;
+            }
+            return fromJson(className:ObjectFactory.optionalInnerType(className:className), jsonObject:jsonObject);
+        } else if(ObjectFactory.isList(className: className)){
             let listInfo=ObjectFactory<JSonBaseObject>.getListInfo(className: className);
             switch listInfo.level{
             case 1:
@@ -38,8 +45,16 @@ public class GGAJson {
             default:
                 print("ERROR!!");
             }
-        }else if(className == "String"){
+        }else if(className == "String" || className == "Swift.String"){
             return jsonObject.stringValue;
+        }else if(className == "__ObjC.NSNumber"){
+            if(jsonObject.double != nil){
+                return NSNumber(floatLiteral: jsonObject.doubleValue);
+            }
+            if(jsonObject.int != nil){
+                return NSNumber(integerLiteral: jsonObject.intValue);
+            }
+            
         }else {
             let typeOfObject = ObjectFactory<JSonBaseObject>.getType(className: className)
             return  GGAJson.fromJson(type:typeOfObject, jsonObject: jsonObject)

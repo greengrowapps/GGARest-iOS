@@ -9,12 +9,21 @@
 import UIKit
 import SwiftyJSON
 
-protocol OptionalProtocol {}
+protocol OptionalProtocol {
+     func isNull() -> Bool
+}
 public protocol JsoneableProtocol {
     func toJson()->JSON
 }
 
-extension Optional : OptionalProtocol {}
+extension Optional : OptionalProtocol {
+    func isNull() -> Bool {
+        guard self == nil else {
+            return false;
+        }
+        return true;
+    }
+}
 //extension NSObject : JsoneableProtocol {}
 extension Array : JsoneableProtocol {
     public func toJson() -> JSON {
@@ -42,6 +51,14 @@ extension String : JsoneableProtocol{
     public func toJson() -> JSON {
         return JSON(self);
     }
+}
+
+extension NSNumber : JsoneableProtocol{
+    public func toJson() -> JSON {
+        return JSON(self);
+    }
+    
+    
 }
 
 extension Optional : JsoneableProtocol{
@@ -93,13 +110,31 @@ open class JSonBaseObject: NSObject,JsoneableProtocol {
         for case let (label?, value) in aMirror.children {
             if((value is String) && json[label].string != nil){
                 self.setValue(json[label].stringValue, forKey: label);
+                continue;
             }
             
             if((value is Int) && json[label].int != nil){
                 self.setValue(json[label].intValue, forKey: label);
+                continue;
             }
             
             //let casted = value as? Optional<JSonBaseObject>
+            
+            if(value is JsoneableProtocol){
+                let object=GGAJson.fromJson(className: String(reflecting:type(of:value)), jsonObject: json[label]);
+                if(object is OptionalProtocol){
+                    let o = object as! OptionalProtocol;
+                    if !o.isNull() {
+                        self.setValue(object, forKey: label)
+                    }else{
+                        self.setValue(nil, forKey: label)
+                    }
+
+                }else{
+                    self.setValue(object, forKey: label)
+                }
+                continue;
+            }
         
             if(value is [JsoneableProtocol]){
                 let array=GGAJson.fromJson(className: String(reflecting:type(of:value)), jsonObject: json[label]);

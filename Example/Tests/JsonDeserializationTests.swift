@@ -98,6 +98,87 @@ class JsonDeserializationTests: XCTestCase {
 
         XCTAssertEqual(object, "hola");
     }
+    
+    func testNullables(){
+        var jsonString = "{}"
+        
+        var object=GGAJson.fromJson(type: ObjectWithNullables.self, jsonString: jsonString);
+        
+        XCTAssertNil(object.nullableInt);
+        XCTAssertNil(object.nullableString);
+        XCTAssertNil(object.nullablechildList);
+        XCTAssertNil(object.nullableChild);
+        
+        jsonString = "{\"nullableString\":\"hola\"}"
+        
+        object=GGAJson.fromJson(type: ObjectWithNullables.self, jsonString: jsonString);
+        
+        XCTAssertNil(object.nullableInt);
+        XCTAssertNotNil(object.nullableString);
+        XCTAssertNil(object.nullablechildList);
+        XCTAssertNil(object.nullableChild);
+        XCTAssertEqual(object.nullableString, "hola");
+        
+        jsonString = "{\"nullableChild\":{\"id\":17}}"
+        
+        object=GGAJson.fromJson(type: ObjectWithNullables.self, jsonString: jsonString);
+        
+        XCTAssertNil(object.nullableInt);
+        XCTAssertNil(object.nullableString);
+        XCTAssertNil(object.nullablechildList);
+        XCTAssertNotNil(object.nullableChild);
+        XCTAssertEqual(object.nullableChild!.id, 17);
+        
+        jsonString = "{\"nullablechildList\":[{\"id\":17},{\"id\":18}]}"
+        
+        object=GGAJson.fromJson(type: ObjectWithNullables.self, jsonString: jsonString);
+        
+        XCTAssertNil(object.nullableInt);
+        XCTAssertNil(object.nullableString);
+        XCTAssertNotNil(object.nullablechildList);
+        XCTAssertNil(object.nullableChild);
+        XCTAssertEqual(object.nullablechildList![0].id, 17);
+        XCTAssertEqual(object.nullablechildList![1].id, 18);
+
+        jsonString = "{\"nullableInt\":20}"
+        
+        object=GGAJson.fromJson(type: ObjectWithNullables.self, jsonString: jsonString);
+        
+        XCTAssertNotNil(object.nullableInt);
+        XCTAssertNil(object.nullableString);
+        XCTAssertNil(object.nullablechildList);
+        XCTAssertNil(object.nullableChild);
+        XCTAssertEqual(object.nullableInt, 20);
+        
+        jsonString = "{\"nullableInt\":20.5}"
+        
+        object=GGAJson.fromJson(type: ObjectWithNullables.self, jsonString: jsonString);
+        
+        XCTAssertNotNil(object.nullableInt);
+        XCTAssertNil(object.nullableString);
+        XCTAssertNil(object.nullablechildList);
+        XCTAssertNil(object.nullableChild);
+        XCTAssertEqual(object.nullableInt, 20.5);
+    }
+    
+    func testNsNumber(){
+        var object = ObjectWithNullables();
+        object.nullableInt = 12;
+        var json = object.toJson();
+        
+        XCTAssertNotNil(json["nullableInt"].int)
+        XCTAssertEqual(json["nullableInt"].intValue, 12)
+        
+        object = ObjectWithNullables();
+        object.nullableInt = 12.5;
+        json = object.toJson();
+        
+        XCTAssertNotNil(json["nullableInt"].float)
+        XCTAssertEqual(json["nullableInt"].floatValue, 12.5)
+        
+        XCTAssertNotNil(json["nullableInt"].double)
+        XCTAssertEqual(json["nullableInt"].doubleValue, 12.5)
+    }
 
  
 
