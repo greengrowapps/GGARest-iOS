@@ -90,6 +90,14 @@ class JsonDeserializationTests: XCTestCase {
         
         print(object);
     }
+    
+    func testSerializeJsonString(){
+        let jsonString = "\"hola\""
+        
+        let object=GGAJson.fromJson(type: String.self, jsonString: jsonString);
+
+        XCTAssertEqual(object, "hola");
+    }
 
  
 

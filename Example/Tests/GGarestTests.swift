@@ -173,7 +173,7 @@ class GGarestTests: XCTestCase {
         toSend.childList.append(MyChild());
         toSend.childList[0].id=1
         toSend.childList[1].id=2
-    
+        
         
         let url="https://httpbin.org/anything";
         GGARest.ws()
@@ -186,8 +186,36 @@ class GGarestTests: XCTestCase {
                 XCTAssertNotNil(object.json)
                 self.assertAreEqual(obj: toSend, obj2: object.json!)
                 
-             //   XCTAssertEqual(object.headers["Host"], "httpbin.org")
-             //   XCTAssertEqual(object.headers["Content-Type"], "application/json")
+                //   XCTAssertEqual(object.headers["Host"], "httpbin.org")
+                //   XCTAssertEqual(object.headers["Content-Type"], "application/json")
+                
+                expectation.fulfill();
+            })
+            .onOther(simpleListener: {(response: FullRepsonse) -> Void in
+                expectation.fulfill();
+                XCTFail()
+            })
+            .execute();
+        
+        wait(for: [expectation], timeout: 30.0)
+    }
+    
+    func testPostJsonString(){
+        let expectation = XCTestExpectation(description: "Finish request")
+       
+
+        
+        let url="https://httpbin.org/anything";
+        GGARest.ws()
+            .post(url: url)
+            .withJson(object:"hola")
+            .onSuccess(resultType: EchoResponse_String.self, objectListener: {(objectStorer: ObjectStorer ,response:FullRepsonse) -> Void in
+                
+                let object = objectStorer.getObject(type: EchoResponse_String.self)
+                XCTAssertNotNil(object)
+                XCTAssertNotNil(object.json)
+                XCTAssertEqual(object.json,"hola")
+                
 
                 expectation.fulfill();
             })

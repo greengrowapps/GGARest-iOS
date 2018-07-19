@@ -133,7 +133,10 @@ public class RequestBuilder {
             if(post.contentJson != nil){
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
                 let json=post.contentJson!.toJson()
-                let pjson = json.rawString(String.Encoding.utf8, options: .prettyPrinted)
+                var pjson = json.rawString(String.Encoding.utf8, options: .prettyPrinted)
+                if(json.type == SwiftyJSON.Type.string){
+                    pjson = "\""+pjson!+"\""
+                }
                 request.httpBody = (pjson?.data(using: .utf8))! as Data
             }else if(post.plainText != nil){
                 request.setValue("text/plain;charset=UTF-8", forHTTPHeaderField: "Content-Type")

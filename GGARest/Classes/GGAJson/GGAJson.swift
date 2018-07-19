@@ -12,6 +12,14 @@ import SwiftyJSON
 public class GGAJson {
     
     public static func fromJson(className:String,jsonString:String) -> JsoneableProtocol{
+        //swiftyJsonBug problem serializing simple json strings like \"hello\"
+        if(jsonString.hasPrefix("\"") && jsonString.hasSuffix("\"")){
+            let myNSString = jsonString as NSString
+            let name=myNSString.substring(with: NSRange(location: 1, length: jsonString.count-2))
+            let result = name as String;
+            return result;
+        }
+        
         let data=jsonString.data(using: .utf8)!;
         let json = try? JSON(data: data);
         return  fromJson(className: className, jsonObject: json!);
@@ -30,7 +38,9 @@ public class GGAJson {
             default:
                 print("ERROR!!");
             }
-        }else{
+        }else if(className == "String"){
+            return jsonObject.stringValue;
+        }else {
             let typeOfObject = ObjectFactory<JSonBaseObject>.getType(className: className)
             return  GGAJson.fromJson(type:typeOfObject, jsonObject: jsonObject)
         }
@@ -64,6 +74,17 @@ public class GGAJson {
     }
  
     public static func fromJson<T:JsoneableProtocol>(type:T.Type,jsonString:String) -> T{
+        //swiftyJsonBug problem serializing simple json strings like \"hello\"
+        if(jsonString.hasPrefix("\"") && jsonString.hasSuffix("\"")){
+            let myNSString = jsonString as NSString
+            let name=myNSString.substring(with: NSRange(location: 1, length: jsonString.count-2))
+            let result = name as String;
+            return result as! T;
+        }
+       
+        
+
+        
         let data=jsonString.data(using: .utf8)!;
         let json = try? JSON(data: data);
         return fromJson(type: type, jsonObject: json!);
